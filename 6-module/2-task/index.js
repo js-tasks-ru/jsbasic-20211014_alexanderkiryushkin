@@ -4,7 +4,6 @@ export default class ProductCard {
   constructor(product) {
     this.product = product;
     this.render();
-    console.log(this.product, 'first');
 
     this.elem.querySelector('button').addEventListener('click', this.onClick);
   }
@@ -23,8 +22,6 @@ export default class ProductCard {
                     </button>
                 </div>
             </div>`);
-
-    console.log(this.elem);
   }
 
   onClick = (event) => {
@@ -35,5 +32,3 @@ export default class ProductCard {
     this.elem.dispatchEvent(customEvent);
   }
 }
-
-console.log(ProductCard);
